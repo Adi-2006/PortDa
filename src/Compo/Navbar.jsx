@@ -68,26 +68,6 @@ function Navbar() {
                   About
                 </NavLink>
               </li>
-              {/* skills */}
-              <li className="py-2 px-2 text-xl">
-                <NavLink
-                  className={({ isActive }) =>
-                    `py-2 px-3 duration-200 border dark:border-gray-200 hover:bg-gray-100 rounded-2xl
-                    ${isActive
-                      ? "text-orange-500"
-                      : "text-gray-700 dark:text-white"
-                    }
-                    ${isActive
-                      ? "bg-gray-200"
-                      : "dark:bg-gray-600"
-                    }
-                    hover:text-orange-700 text-xl `
-                  }
-                  to="/skills"
-                >
-                  Skills
-                </NavLink>
-              </li>
               {/* projects */}
               <li className="py-2 px-2 text-xl">
                 <NavLink

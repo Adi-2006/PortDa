@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
-const text = `"Hi, I'm a passionate Frontend Developer dedicated to crafting beautiful, responsive, and user-friendly web experiences. With expertise in modern web technologies, I transform ideas into interactive and engaging digital solutions. My focus is on clean code, seamless performance, and intuitive design to enhance user experience. Let's build something amazing together!"`;
+const text = `"Hi, I'm a passionate Data Analyst dedicated to turning raw data into meaningful insights that drive informed decision-making. With expertise in data visualization, statistical analysis, and modern analytical tools, I transform complex datasets into clear, actionable stories. My focus is on accuracy, clarity, and impactful reporting to support business goals. Let's uncover insights and make data-driven decisions together!"`;
 
 function Home() {
   const [displayedText, setDisplayedText] = useState("");
@@ -21,7 +21,7 @@ function Home() {
   return (
     <div className="w-screen min-h-screen flex pt-4  pb-20  dark:bg-gray-500 text-gray-800 dark:text-zinc-200 ">
       <div className="w-10/12 relative mx-auto bg-gray-300 px-12 dark:bg-[#1e293b] text-gray-800 dark:text-white  flex xl:items-center xl:justify-between xl:flex-row flex-col items-center rounded-2xl  gap-12 py-16 ">
-      
+
         <div className=" xl:w-[50%] w-[100%] flex items-center justify-center">
           <div className="mobile:w-[350px] mobile:h-[350px]  smobile:w-[250px] smobile:h-[250px] w-[175px] h-[175px] smobile:rounded-full  bg-blue-500 shadow-[0_0_15px_#22c55e,0_0_30px_#22c55e,0_0_50px_#22c55e] hover:animate-pulse  flex items-center justify-center relative ">
             <img

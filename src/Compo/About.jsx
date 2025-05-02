@@ -75,9 +75,7 @@ function About() {
                 >
                   <div className="w-[30px] transform scale-150">🚀</div>{" "}
                   <p className="text-lg">
-                    An <strong>aspiring Frontend Developer</strong> passionate
-                    about crafting user-friendly, high-performance web
-                    applications.
+                  An <strong>aspiring Data Analyst</strong> passionate about uncovering insights and driving data-informed decisions.
                   </p>
                 </li>
                 {/* li-3 */}
@@ -87,13 +85,8 @@ function About() {
                 >
                   <span className="w-[30px] transform scale-150">💡</span>
                   <p className="text-lg">
-                    {" "}
-                    Skilled in{" "}
-                    <strong>
-                      React.js, Context API, Tailwind CSS, and Java
-                    </strong>
-                    , with a deep understanding of{" "}
-                    <strong>Data Structures & Algorithms (DSA)</strong>.
+                  Familiar with tools like <strong>Excel, SQL, Power BI, and Python</strong> for analyzing and visualizing data.
+                
                   </p>
                 </li>
                 {/* li-4 */}
@@ -104,12 +97,7 @@ function About() {
                   <div className="w-[30px] transform scale-150">🔥</div>
                   <p className="text-lg">
                     {" "}
-                    Enthusiastic about{" "}
-                    <strong>
-                      frontend development, UI/UX, and optimizing web
-                      performance
-                    </strong>{" "}
-                    for a seamless user experience.
+                    Interested in <strong>cleaning, exploring, and presenting data</strong> to make it easier to understand and act on.
                   </p>
                 </li>
                 {/* li-5 */}
@@ -120,8 +108,7 @@ function About() {
                   <div className="w-[30px] transform scale-150">🎯</div>
                   <p className="text-lg">
                     {" "}
-                    Actively improving **DSA skills** by solving problems on
-                    platforms like **LeetCode and Gfg**.
+                    Learning <strong>Data Structures & Algorithms (DSA)</strong> by solving problems on platforms like <strong>LeetCode</strong> and <strong>GFG</strong>.
                   </p>
                 </li>
                 {/* li-6 */}
@@ -131,9 +118,7 @@ function About() {
                 >
                   <div className="w-[30px] transform scale-150">🤝</div>{" "}
                   <p className="text-lg">
-                    Seeking opportunities to apply my skills, contribute to
-                    innovative projects, and grow as a professional in the
-                    **software development industry**.
+                  Eager to start my career and contribute to real-world projects as a <strong>junior data analyst</strong> while growing my technical and problem-solving skills.
                   </p>
                 </li>
               </ul>

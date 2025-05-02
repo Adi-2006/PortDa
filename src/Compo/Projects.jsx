@@ -1,18 +1,18 @@
-import React,{useEffect,useRef} from "react";
-import {gsap} from "gsap";
+import React, { useEffect, useRef } from "react";
+import { gsap } from "gsap";
 
 
 function Projects() {
 
   const divRefs = useRef([]);
-    
-      useEffect(() => {
-        gsap.fromTo(
-          divRefs.current,
-          { opacity: 0, y: 20 },
-          { opacity: 1, y: 0, duration: 0.7, stagger: 1, ease: "power2.out",  }
-        );
-      }, []);
+
+  // useEffect(() => {
+  //   gsap.fromTo(
+  //     divRefs.current,
+  //     { opacity: 0, y: 20 },
+  //     { opacity: 1, y: 0, duration: 0.7, stagger: 1, ease: "power2.out",  }
+  //   );
+  // }, []);
 
   return (
     <>
@@ -23,406 +23,149 @@ function Projects() {
           {/* heading and green light div */}
           <div ref={(element) => (divRefs.current[1] = element)} className="group flex flex-col items-center gap-4">
             <h2 className="mobile:text-4xl text-center font-extrabold text-2xl select-none group-hover:dark:[text-shadow:0_0_15px_#87CEEB] transition  duration-900 ease-in-out group-hover:[text-shadow:0_0_15px_#374151] active:[text-shadow:0_0_15px_#87CEEB]">
-              Projects
+              Skills
             </h2>
             <div className="bg-green-500 w-12 h-1 group-hover:bg-orange-500 active:bg-orange-500"></div>
           </div>
-          {/* grid for divs */}
-          <div ref={(element) => (divRefs.current[3] = element)} className="grid smobile:w-[90%] rounded-2xl place-items-center  xll:grid-cols-3 my-4 py-2 lg:grid-cols-[repeat(2,minmax(0,1fr))] grid-cols-[repeat(1,minmax(0,1fr))] pb-8 px-4  b items-start lg:gap-4 gap-6 border-t-2 shadow-[0_10px_10px_rgba(0,0,0,0.6)]">
-
-
-
-            {/* Project 1: Expense Tracker*/}
-
-            <div  ref={(element) => (divRefs.current[4] = element)}  className="w-[100%]  rounded-2xl flex flex-col dark:bg-gray-800 items-center lg:my-2 my-3 py-4 shadow-[0_10px_10px_rgba(0,0,0,0.6)] justify-center gap-6 lg:min-h-[350px] px-3 h-auto">
-              {/* Title */}
-              <h3 className="text-center mx-auto text-2xl font-bold hover:dark:[text-shadow:0_0_15px_#87CEEB] transition duration-900 ease-in-out hover:[text-shadow:0_0_15px_#374151]">
-                Expense Tracker
-              </h3>
-              {/* Image Section */}
-              <div className="flex flex-col items-center justify-center gap-4">
-                <img
-                  src="./expenseTracker.PNG"
-                  className=" w-[80%]   rounded-lg"
-                  alt="Expense Tracker"
-                />
-              
+          {/* Contents */}
+          <div className="flex flex-col w-[100%]">
+            {/* Skills */}
+            <div className="grid  lg:grid-cols-2 gap-4 mx-auto">
+              {/* Data Base */}
+              <div className="flex items-center justify-center gap-2">
+                <h4 className="font-bold   mobile:text-2xl hover:dark:[text-shadow:0_0_15px_#87CEEB] transition  duration-900 ease-in-out hover:[text-shadow:0_0_15px_#374151] active:[text-shadow:0_0_15px_#87CEEB] ">Database :-</h4>
+                <p className="mobile:text-xl hover:dark:[text-shadow:0_0_15px_#87CEEB] transition  duration-900 ease-in-out hover:[text-shadow:0_0_15px_#374151] active:[text-shadow:0_0_15px_#87CEEB] ">Postgre SQL</p>
               </div>
-              {/* Live Link */}
-              <div className="mx-auto group text-xl dark:hover:text-blue-500 hover:text-blue-800">
-                <a
-                  href="https://adi-2006.github.io/expense_tracker/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Live Demo 🔗
-                </a>
+              {/* Lang */}
+              <div className="flex items-center xsmobile:flex-row flex-col justify-center gap-2 ">
+                <h4 className="font-bold  mobile:text-2xl hover:dark:[text-shadow:0_0_15px_#87CEEB] transition  duration-900 ease-in-out hover:[text-shadow:0_0_15px_#374151] active:[text-shadow:0_0_15px_#87CEEB] " >Language :-</h4>
+                <p className="mobile:text-xl hover:dark:[text-shadow:0_0_15px_#87CEEB] transition  duration-900 ease-in-out hover:[text-shadow:0_0_15px_#374151] active:[text-shadow:0_0_15px_#87CEEB]" >Python,Java & JavaScript</p>
               </div>
-              {/* Description & Features */}
-              <div className="text-center px-4  ">
-                <p className="text-gray-900 max-w-[600px] hover:dark:[text-shadow:0_0_15px_#87CEEB] transition duration-900 ease-in-out hover:[text-shadow:0_0_15px_#374151] dark:text-gray-300">
-                A simple yet powerful Expense Tracker that helps users manage finances effectively. Supports adding and deleting expenses with local storage for data persistence.
-                </p>
-                <div className="w-[80%] mx-auto flex items-center justify-center">
-                <ul className="mt-4 text-gray-900 text-start dark:text-gray-300  list-disc pl-5   list-outside">
-                  <li className="hover:dark:[text-shadow:0_0_15px_#87CEEB] transition duration-900 ease-in-out hover:[text-shadow:0_0_15px_#374151]">
-                  ✅ Add & Delete Expenses</li>
-                  <li className="hover:dark:[text-shadow:0_0_15px_#87CEEB] transition duration-900 ease-in-out hover:[text-shadow:0_0_15px_#374151]">💰 Total Expense Display</li>
-                  <li className="hover:dark:[text-shadow:0_0_15px_#87CEEB] transition duration-900 ease-in-out hover:[text-shadow:0_0_15px_#374151]">💾 Persistent Storage (Local Storage)</li>
-                  <li className="hover:dark:[text-shadow:0_0_15px_#87CEEB] transition duration-900 ease-in-out hover:[text-shadow:0_0_15px_#374151]">⚡ Built using Redux Toolkit for state management</li>
-                </ul>
-                </div>
+              {/* Libariries */}
+              <div className="flex items-center justify-center gap-2 ">
+                <h4 className="font-bold  hover:dark:[text-shadow:0_0_15px_#87CEEB] transition  duration-900 ease-in-out hover:[text-shadow:0_0_15px_#374151] active:[text-shadow:0_0_15px_#87CEEB]   mobile:text-2xl" >Libraries :-</h4>
+                <p className="mobile:text-xl hover:dark:[text-shadow:0_0_15px_#87CEEB] transition  duration-900 ease-in-out hover:[text-shadow:0_0_15px_#374151] active:[text-shadow:0_0_15px_#87CEEB] " >Pandas & Numpy</p>
               </div>
-              {/* Tech Stack */}
-              <div className="flex gap-3 flex-wrap justify-center items-center text-sm font-semibold text-gray-700 dark:text-gray-300">
-                <span className="px-2 py-1 hover:dark:[text-shadow:0_0_15px_#87CEEB] transition duration-900 ease-in-out hover:[text-shadow:0_0_15px_#374151]  bg-gray-200 dark:bg-gray-900 rounded">
-                  React
-                </span>
-                <span className="px-2 py-1 hover:dark:[text-shadow:0_0_15px_#87CEEB] transition duration-900 ease-in-out hover:[text-shadow:0_0_15px_#374151] bg-gray-200 dark:bg-gray-900 rounded">
-                  Redux Toolkit
-                </span>
-                <span className="px-2 py-1 hover:dark:[text-shadow:0_0_15px_#87CEEB] transition duration-900 ease-in-out hover:[text-shadow:0_0_15px_#374151] bg-gray-200 dark:bg-gray-900 rounded">
-                  JavaScript
-                </span>
-
-                <span className="px-2 py-1 hover:dark:[text-shadow:0_0_15px_#87CEEB] transition duration-900 ease-in-out hover:[text-shadow:0_0_15px_#374151] bg-gray-200 dark:bg-gray-900  rounded">
-                  Local Storage
-                </span>
-                <span className="px-2 py-1 hover:dark:[text-shadow:0_0_15px_#87CEEB] transition duration-900 ease-in-out hover:[text-shadow:0_0_15px_#374151] bg-gray-200 dark:bg-gray-900 rounded">
-                  Tailwind CSS
-                </span>
-                <span className="px-2 py-1 hover:dark:[text-shadow:0_0_15px_#87CEEB] transition duration-900 ease-in-out hover:[text-shadow:0_0_15px_#374151] bg-gray-200 dark:bg-gray-900  rounded">
-                  HTML
-                </span>
+              {/* other Skills */}
+              <div className="flex items-center justify-center gap-2 ">
+                <h4 className="font-bold  hover:dark:[text-shadow:0_0_15px_#87CEEB] transition  duration-900 ease-in-out hover:[text-shadow:0_0_15px_#374151] active:[text-shadow:0_0_15px_#87CEEB]  mobile:text-2xl" >Other Skills :-</h4>
+                <p className="mobile:text-xl hover:dark:[text-shadow:0_0_15px_#87CEEB] transition  duration-900 ease-in-out hover:[text-shadow:0_0_15px_#374151] active:[text-shadow:0_0_15px_#87CEEB] " >Microsoft Excel  </p>
               </div>
             </div>
-
-
-
-
-
-            {/* Pr-2 Notes App */}
-            <div ref={(element) => (divRefs.current[5] = element)}  className="w-[100%]  rounded-2xl flex flex-col dark:bg-gray-800 items-center lg:my-2 my-3 py-4 shadow-[0_10px_10px_rgba(0,0,0,0.6)] justify-center gap-6 lg:min-h-[350px] px-3 h-auto">
-              {/* Title */}
-              <h3 className="text-center mx-auto text-2xl font-bold hover:dark:[text-shadow:0_0_15px_#87CEEB] transition duration-900 ease-in-out hover:[text-shadow:0_0_15px_#374151]">
-                Notes App
-              </h3>
-              {/* Image Section */}
-              <div className="flex flex-col items-center justify-center gap-4">
-                <img
-                  src="./notesdark.PNG"
-                  className="hidden dark:block w-[80%]   rounded-lg"
-                  alt="Todo App Dark Mode"
-                />
-                <img
-                  src="./notesday.PNG"
-                  className="block dark:hidden w-[80%] rounded-lg"
-                  alt="Todo App Light Mode"
-                />
-              </div>
-              {/* Live Link */}
-              <div className="mx-auto group text-xl dark:hover:text-blue-500 hover:text-blue-800">
-                <a
-                  href="https://adi-2006.github.io/notesApp/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Live Demo 🔗
-                </a>
-              </div>
-              {/* Description & Features */}
-              <div className="text-center px-4 ">
-                <p className="text-gray-900 max-w-[600px] hover:dark:[text-shadow:0_0_15px_#87CEEB] transition duration-900 ease-in-out hover:[text-shadow:0_0_15px_#374151] dark:text-gray-300">
-                A simple yet powerful Notes App to efficiently manage important notes. Supports adding, editing, and deleting notes with a smooth dark mode for a better user experience.
-                </p>
-                <div className="w-[80%] mx-auto flex items-center justify-center">
-                <ul className="mt-4 text-gray-900 text-start dark:text-gray-300  list-disc pl-5  list-outside">
-                  <li className="hover:dark:[text-shadow:0_0_15px_#87CEEB] transition duration-900 ease-in-out hover:[text-shadow:0_0_15px_#374151]">
-                  ✅ Add, Edit & Delete Notes</li>
-                  <li className="hover:dark:[text-shadow:0_0_15px_#87CEEB] transition duration-900 ease-in-out hover:[text-shadow:0_0_15px_#374151]">🌙 Theme Switcher (Light/Dark Mode)</li>
-                  <li className="hover:dark:[text-shadow:0_0_15px_#87CEEB] transition duration-900 ease-in-out hover:[text-shadow:0_0_15px_#374151]">💾 Persistent Storage (Local Storage)</li>
-                  <li className="hover:dark:[text-shadow:0_0_15px_#87CEEB] transition duration-900 ease-in-out hover:[text-shadow:0_0_15px_#374151]">⚡ Built using Context API for state management</li>
-                </ul>
-                </div>
-              </div>
-              {/* Tech Stack */}
-              <div className="flex gap-3 flex-wrap justify-center items-center text-sm font-semibold text-gray-700 dark:text-gray-300">
-                <span className="px-2 py-1    hover:dark:[text-shadow:0_0_15px_#87CEEB] transition duration-900 ease-in-out hover:[text-shadow:0_0_15px_#374151] bg-gray-200 dark:bg-gray-900 rounded">
-                  React
-                </span>
-                <span className="px-2 py-1   hover:dark:[text-shadow:0_0_15px_#87CEEB] transition duration-900 ease-in-out hover:[text-shadow:0_0_15px_#374151] bg-gray-200 dark:bg-gray-900 rounded">
-                  Context API
-                </span>
-                <span className="px-2 py-1   hover:dark:[text-shadow:0_0_15px_#87CEEB] transition duration-900 ease-in-out hover:[text-shadow:0_0_15px_#374151] bg-gray-200 dark:bg-gray-900 rounded">
-                  JavaScript
-                </span>
-
-                <span className="px-2 py-1   hover:dark:[text-shadow:0_0_15px_#87CEEB] transition duration-900 ease-in-out hover:[text-shadow:0_0_15px_#374151] bg-gray-200 dark:bg-gray-900 rounded">
-                  Local Storage
-                </span>
-                <span className="px-2 py-1   hover:dark:[text-shadow:0_0_15px_#87CEEB] transition duration-900 ease-in-out hover:[text-shadow:0_0_15px_#374151] bg-gray-200 dark:bg-gray-900 rounded">
-                  Tailwind CSS
-                </span>
-                <span className="px-2 py-1 hover:dark:[text-shadow:0_0_15px_#87CEEB] transition duration-900 ease-in-out hover:[text-shadow:0_0_15px_#374151] bg-gray-200 dark:bg-gray-900 rounded">
-                  HTML
-                </span>
-              </div>
+            {/* Project */}
+            <div ref={(element) => (divRefs.current[1] = element)} className="group flex flex-col my-4 items-center gap-4">
+              <h2 className="mobile:text-4xl text-center font-extrabold text-2xl select-none group-hover:dark:[text-shadow:0_0_15px_#87CEEB] transition  duration-900 ease-in-out group-hover:[text-shadow:0_0_15px_#374151] active:[text-shadow:0_0_15px_#87CEEB]">
+                Project
+              </h2>
+              <div className="bg-green-500 w-12 h-1 group-hover:bg-orange-500 active:bg-orange-500"></div>
             </div>
-
-
-
-
-            {/* pr-3  Todo App */}
-            <div  ref={(element) => (divRefs.current[6] = element)} className="w-[100%]  rounded-2xl flex flex-col dark:bg-gray-800 items-center lg:my-2 my-3 py-4 shadow-[0_10px_10px_rgba(0,0,0,0.6)] justify-center gap-6 lg:min-h-[350px] px-3 h-auto">
-              {/* Title */}
-              <h3 className="text-center mx-auto text-2xl font-bold hover:dark:[text-shadow:0_0_15px_#87CEEB] transition duration-900 ease-in-out hover:[text-shadow:0_0_15px_#374151]">
-                Todo App
-              </h3>
-              {/* Image Section */}
-              <div className="flex flex-col items-center justify-center gap-4">
-                <img
-                  src="./todoImg.PNG"
-                  className="hidden dark:block w-[80%]   rounded-lg"
-                  alt="Todo App Dark Mode"
-                />
-                <img
-                  src="./lighttodo.PNG"
-                  className="block dark:hidden w-[80%] rounded-lg"
-                  alt="Todo App Light Mode"
-                />
-              </div>
-              {/* Live Link */}
-              <div className="mx-auto group text-xl dark:hover:text-blue-500 hover:text-blue-800">
-                <a
-                  href="https://adi-2006.github.io/todo-app/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Live Demo 🔗
-                </a>
-              </div>
-              {/* Description & Features */}
-              <div className="text-center px-4 ">
-                <p className="text-gray-900 max-w-[600px] hover:dark:[text-shadow:0_0_15px_#87CEEB] transition duration-900 ease-in-out hover:[text-shadow:0_0_15px_#374151] dark:text-gray-300">
-                A simple yet powerful Todo App to efficiently manage daily tasks. Supports adding, editing, and deleting todos with a smooth dark mode for a better user experience.
-                </p>
-                <div className="w-[80%] mx-auto flex items-center justify-center">
-                <ul className="mt-4 text-gray-900 text-start dark:text-gray-300  list-disc pl-5  list-outside">
-                  <li className="hover:dark:[text-shadow:0_0_15px_#87CEEB] transition duration-900 ease-in-out hover:[text-shadow:0_0_15px_#374151]">
-                  ✅ Add, Edit & Delete Todos</li>
-                  <li className="hover:dark:[text-shadow:0_0_15px_#87CEEB] transition duration-900 ease-in-out hover:[text-shadow:0_0_15px_#374151]">🌙 Theme Switcher (Light/Dark Mode)</li>
-                  <li className="hover:dark:[text-shadow:0_0_15px_#87CEEB] transition duration-900 ease-in-out hover:[text-shadow:0_0_15px_#374151]">💾 Persistent Storage (Local Storage)</li>
-                  <li className="hover:dark:[text-shadow:0_0_15px_#87CEEB] transition duration-900 ease-in-out hover:[text-shadow:0_0_15px_#374151]">⚡ Built using Context API for state management</li>
-                </ul>
+            <div className="grid xl:grid-cols-3 mx-auto">
+              {/* mahadev */}
+              <div className="flex items-center justify-center">
+                <div className="my-4 px-4 flex flex-col gap-2 justify-center items-center">
+                  <h4 className="font-bold text-center text-[18px] hover:dark:[text-shadow:0_0_15px_#87CEEB] transition  duration-900 ease-in-out hover:[text-shadow:0_0_15px_#374151] active:[text-shadow:0_0_15px_#87CEEB]">Mahadev Ecommerce Sales Dashboard</h4>
+                  <img src="Mahadev.png" alt="Mahadev Ecommerce Dashboard" className="rounded-lg shadow-lg w-full max-w-4xl" />
+                  <a
+                    href="https://github.com/Adi-2006/MahdevDashboard"
+                    target="_blank"
+                    className="dark:text-teal-400 text-blue-600 hover:text-teal-300  text-lg font-bold underline dark:hover:text-blue-400 "
+                  >
+                    Github Link
+                  </a>
+                  <ul className="flex flex-col gap-3 list-disc  pl-5">
+                    <li className="hover:dark:[text-shadow:0_0_15px_#87CEEB] transition  duration-900 ease-in-out hover:[text-shadow:0_0_15px_#374151] active:[text-shadow:0_0_15px_#87CEEB]">
+                      Built an <strong>interactive Power BI dashboard</strong> to analyze e-commerce performance across metrics like
+                      <strong> sales amount, profit, quantity sold, and AOV (Average Order Value)</strong>.
+                    </li>
+                    <li className="hover:dark:[text-shadow:0_0_15px_#87CEEB] transition  duration-900 ease-in-out hover:[text-shadow:0_0_15px_#374151] active:[text-shadow:0_0_15px_#87CEEB]" >
+                      Used <strong>bar, pie, and donut charts</strong> to visually represent data by
+                      <strong> state, category, sub-category, payment mode, and customer name</strong>, enabling clear and quick insights.
+                    </li>
+                    <li className="hover:dark:[text-shadow:0_0_15px_#87CEEB] transition  duration-900 ease-in-out hover:[text-shadow:0_0_15px_#374151] active:[text-shadow:0_0_15px_#87CEEB]" >
+                      Implemented <strong>monthly and quarterly filters</strong>, allowing stakeholders to drill down and track
+                      <strong> performance trends over time</strong>.
+                    </li>
+                    <li className="hover:dark:[text-shadow:0_0_15px_#87CEEB] transition  duration-900 ease-in-out hover:[text-shadow:0_0_15px_#374151] active:[text-shadow:0_0_15px_#87CEEB]" >
+                      Identified <strong>top-performing states and products</strong> using dynamic visuals, and highlighted
+                      <strong> low-profit months</strong> (e.g., <strong>July, August</strong>) to support strategic planning.
+                    </li>
+                    <li className="hover:dark:[text-shadow:0_0_15px_#87CEEB] transition  duration-900 ease-in-out hover:[text-shadow:0_0_15px_#374151] active:[text-shadow:0_0_15px_#87CEEB]" >
+                      Enhanced decision-making by showing <strong>customer behavior by payment mode</strong> (e.g.,
+                      <strong> COD, UPI</strong>) and visualizing <strong>profitability by product sub-category</strong>.
+                    </li>
+                  </ul>
                 </div>
+
               </div>
-              {/* Tech Stack */}
-              <div className="flex gap-3 flex-wrap justify-center items-center text-sm font-semibold text-gray-700 dark:text-gray-300">
-                <span className="px-2 py-1    hover:dark:[text-shadow:0_0_15px_#87CEEB] transition duration-900 ease-in-out hover:[text-shadow:0_0_15px_#374151] bg-gray-200 dark:bg-gray-900 rounded">
-                  React
-                </span>
-                <span className="px-2 py-1   hover:dark:[text-shadow:0_0_15px_#87CEEB] transition duration-900 ease-in-out hover:[text-shadow:0_0_15px_#374151] bg-gray-200 dark:bg-gray-900 rounded">
-                  Context API
-                </span>
-                <span className="px-2 py-1   hover:dark:[text-shadow:0_0_15px_#87CEEB] transition duration-900 ease-in-out hover:[text-shadow:0_0_15px_#374151] bg-gray-200 dark:bg-gray-900 rounded">
-                  JavaScript
-                </span>
-
-                <span className="px-2 py-1   hover:dark:[text-shadow:0_0_15px_#87CEEB] transition duration-900 ease-in-out hover:[text-shadow:0_0_15px_#374151] bg-gray-200 dark:bg-gray-900 rounded">
-                  Local Storage
-                </span>
-                <span className="px-2 py-1   hover:dark:[text-shadow:0_0_15px_#87CEEB] transition duration-900 ease-in-out hover:[text-shadow:0_0_15px_#374151] bg-gray-200 dark:bg-gray-900 rounded">
-                  Tailwind CSS
-                </span>
-                <span className="px-2 py-1 hover:dark:[text-shadow:0_0_15px_#87CEEB] transition duration-900 ease-in-out hover:[text-shadow:0_0_15px_#374151] bg-gray-200 dark:bg-gray-900 rounded">
-                  HTML
-                </span>
-              </div>
-            </div>
-
-
-
-
-            {/* pr-4 ChatBot */}
-            <div ref={(element) => (divRefs.current[7] = element)}  className="w-[100%]  rounded-2xl flex flex-col dark:bg-gray-800 items-center lg:my-2 my-3 py-4 shadow-[0_10px_10px_rgba(0,0,0,0.6)] justify-center gap-6 lg:min-h-[350px] px-3 h-auto">
-              {/* Title */}
-              <h3 className="text-center mx-auto text-2xl font-bold hover:dark:[text-shadow:0_0_15px_#87CEEB] transition duration-900 ease-in-out hover:[text-shadow:0_0_15px_#374151]">
-                Chat Bot
-              </h3>
-              {/* Image Section */}
-              <div className="flex flex-col items-center justify-center gap-4">
-                <img
-                  src="./chatbot.PNG"
-                  className="w-[80%]   rounded-lg"
-                  alt="ChatBot"
-                />
-                
-              </div>
-              {/* Live Link */}
-              <div className="mx-auto group text-xl dark:hover:text-blue-500 hover:text-blue-800">
-                <a
-                  href="https://adi-2006.github.io/ChatBot_DeepInfra/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Live Demo 🔗
-                </a>
-              </div>
-              {/* Description & Features */}
-              <div className="text-center px-4 ">
-                <p className="text-gray-900 max-w-[600px] hover:dark:[text-shadow:0_0_15px_#87CEEB] transition duration-900 ease-in-out hover:[text-shadow:0_0_15px_#374151] dark:text-gray-300">
-                A simple yet powerful AI Chatbot that provides smart and interactive responses. Built using Deep Infra API for AI-powered conversations with a sleek UI.
-                </p>
-                <div className="w-[80%] mx-auto flex items-center justify-center">
-                <ul className="mt-4 text-gray-900 text-start dark:text-gray-300  list-disc pl-5  list-outside">
-                  <li className="hover:dark:[text-shadow:0_0_15px_#87CEEB] transition duration-900 ease-in-out hover:[text-shadow:0_0_15px_#374151]">
-                  ✅ AI-Powered Chat Responses</li>
-                  <li className="hover:dark:[text-shadow:0_0_15px_#87CEEB] transition duration-900 ease-in-out hover:[text-shadow:0_0_15px_#374151]">🎨 Clean & Responsive UI</li>
-                  <li className="hover:dark:[text-shadow:0_0_15px_#87CEEB] transition duration-900 ease-in-out hover:[text-shadow:0_0_15px_#374151]">⚡ Fast & Efficient Performance</li>
-                  <li className="hover:dark:[text-shadow:0_0_15px_#87CEEB] transition duration-900 ease-in-out hover:[text-shadow:0_0_15px_#374151]">🔗 Integrated with Deep Infra API for conversations </li>
-                </ul>
+              {/* Vrinda */}
+              <div className="flex items-center justify-center">
+                <div className="my-4 px-4 flex flex-col gap-2 justify-center items-center">
+                  <h4 className="font-bold text-center text-[18px] hover:dark:[text-shadow:0_0_15px_#87CEEB] transition  duration-900 ease-in-out hover:[text-shadow:0_0_15px_#374151] active:[text-shadow:0_0_15px_#87CEEB]">Vrinda Sales Dashboard</h4>
+                  <img src="Vrinda.PNG" alt="Mahadev Ecommerce Dashboard" className="rounded-lg shadow-lg w-full max-w-4xl" />
+                  <a
+                    href="https://github.com/Adi-2006/VirindaSales"
+                    target="_blank"
+                    className="dark:text-teal-400 text-blue-600 hover:text-teal-300  text-lg font-bold underline dark:hover:text-blue-400 "
+                  >
+                    Github Link
+                  </a>
+                  <ul className="flex flex-col gap-3 list-disc  pl-5">
+                    <li className="hover:dark:[text-shadow:0_0_15px_#87CEEB] transition  duration-900 ease-in-out hover:[text-shadow:0_0_15px_#374151] active:[text-shadow:0_0_15px_#87CEEB]">
+                      Designed an <strong>interactive Excel dashboard</strong> to visualize sales and order trends across months, states, channels, and customer demographics.
+                    </li>
+                    <li className="hover:dark:[text-shadow:0_0_15px_#87CEEB] transition  duration-900 ease-in-out hover:[text-shadow:0_0_15px_#374151] active:[text-shadow:0_0_15px_#87CEEB]">
+                      Created <strong>dynamic slicers</strong> for <strong>Month, Channel, and Category</strong> to enable quick filtering and drill-down analysis.
+                    </li>
+                    <li className="hover:dark:[text-shadow:0_0_15px_#87CEEB] transition  duration-900 ease-in-out hover:[text-shadow:0_0_15px_#374151] active:[text-shadow:0_0_15px_#87CEEB]">
+                      Analyzed <strong>Orders vs Sales</strong> patterns monthly, revealing peak performance in <strong>March</strong> and a decline in the last quarter.
+                    </li>
+                    <li className="hover:dark:[text-shadow:0_0_15px_#87CEEB] transition  duration-900 ease-in-out hover:[text-shadow:0_0_15px_#374151] active:[text-shadow:0_0_15px_#87CEEB]">
+                      Highlighted <strong>top 5 performing states</strong> with Maharashtra leading at <strong>2.99M</strong> in sales.
+                    </li>
+                    <li className="hover:dark:[text-shadow:0_0_15px_#87CEEB] transition  duration-900 ease-in-out hover:[text-shadow:0_0_15px_#374151] active:[text-shadow:0_0_15px_#87CEEB]">
+                      Visualized customer behavior through <strong>Orders by Age & Gender</strong> and <strong>Sales: Men vs Women</strong> pie charts, noting that <strong>Women account for 64% of sales</strong>.
+                    </li>
+                    <li className="hover:dark:[text-shadow:0_0_15px_#87CEEB] transition  duration-900 ease-in-out hover:[text-shadow:0_0_15px_#374151] active:[text-shadow:0_0_15px_#87CEEB]">
+                      Showcased <strong>Order Status</strong> insights, where <strong>92% of orders were delivered</strong>, aiding operational evaluation.
+                    </li>
+                  </ul>
                 </div>
+
               </div>
-              {/* Tech Stack */}
-              <div className="flex gap-3 flex-wrap justify-center items-center text-sm font-semibold text-gray-700 dark:text-gray-300">
-                <span className="px-2 py-1  hover:dark:[text-shadow:0_0_15px_#87CEEB] transition duration-900 ease-in-out hover:[text-shadow:0_0_15px_#374151] bg-gray-200 dark:bg-gray-900 rounded">
-                  React
-                </span>
-                <span className="px-2 py-1  hover:dark:[text-shadow:0_0_15px_#87CEEB] transition duration-900 ease-in-out hover:[text-shadow:0_0_15px_#374151] bg-gray-200 dark:bg-gray-900 rounded">
-                  Redux Toolkit
-                </span>
-                
-                <span className="px-2 py-1  hover:dark:[text-shadow:0_0_15px_#87CEEB] transition duration-900 ease-in-out hover:[text-shadow:0_0_15px_#374151] bg-gray-200 dark:bg-gray-900 rounded">
-                  JavaScript
-                </span>
 
-                <span className="px-2 py-1  hover:dark:[text-shadow:0_0_15px_#87CEEB] transition duration-900 ease-in-out hover:[text-shadow:0_0_15px_#374151] bg-gray-200 dark:bg-gray-900 rounded">
-                  DeepInfra API
-                </span>
-
-                <span className="px-2 py-1  hover:dark:[text-shadow:0_0_15px_#87CEEB] transition duration-900 ease-in-out hover:[text-shadow:0_0_15px_#374151] bg-gray-200 dark:bg-gray-900 rounded">
-                  Tailwind CSS
-                </span>
-                <span className="px-2 py-1  hover:dark:[text-shadow:0_0_15px_#87CEEB] transition duration-900 ease-in-out hover:[text-shadow:0_0_15px_#374151] bg-gray-200 dark:bg-gray-900 rounded">
-                  HTML
-                </span>
-              </div>
-            </div>
-
-
-
-
-            {/* Pr:5 Tic Tac Toe */}
-            <div ref={(element) => (divRefs.current[8] = element)}  className="w-[100%] rounded-2xl my-auto  flex flex-col dark:bg-gray-800 items-center  py-4 shadow-[0_10px_10px_rgba(0,0,0,0.6)] justify-center gap-6 lg:min-h-[350px] px-3 h-auto">
-              {/* Title */}
-              <h3 className="text-center mx-auto text-2xl font-bold hover:dark:[text-shadow:0_0_15px_#87CEEB] transition duration-900 ease-in-out hover:[text-shadow:0_0_15px_#374151]">
-                Tic Tac Toe
-              </h3>
-              {/* Image Section */}
-              <div className="flex flex-col items-center justify-center gap-4">
-                <img
-                  src="./tic.PNG"
-                  className="w-[80%]   rounded-lg"
-                  alt="Tic Tac Toe"
-                />
-                
-              </div>
-              {/* Live Link */}
-              <div className="mx-auto group text-xl dark:hover:text-blue-500 hover:text-blue-800">
-                <a
-                  href="https://adi-2006.github.io/Tic_Tac_Toe/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Live Demo 🔗
-                </a>
-              </div>
-              {/* Description & Features */}
-              <div className="text-center px-4 ">
-                <p className="text-gray-900 max-w-[600px]   hover:dark:[text-shadow:0_0_15px_#87CEEB] transition duration-900 ease-in-out hover:[text-shadow:0_0_15px_#374151] dark:text-gray-300">
-                A simple yet fun Tic-Tac-Toe game with smooth gameplay and an interactive UI. Built using HTML, CSS, and JavaScript for a seamless experience.  
-                </p>
-                <div className="w-[80%] mx-auto flex items-center justify-center">
-                <ul className="mt-4 text-gray-900 text-start dark:text-gray-300  list-disc pl-5  list-outside">
-                  <li  className="hover:dark:[text-shadow:0_0_15px_#87CEEB] transition duration-900 ease-in-out hover:[text-shadow:0_0_15px_#374151]">
-                  ✅ Classic Tic-Tac-Toe Gameplay</li>
-                  <li  className="hover:dark:[text-shadow:0_0_15px_#87CEEB] transition duration-900 ease-in-out hover:[text-shadow:0_0_15px_#374151]">🎨 Clean & Responsive UI</li>
-                  <li  className="hover:dark:[text-shadow:0_0_15px_#87CEEB] transition duration-900 ease-in-out hover:[text-shadow:0_0_15px_#374151]">⚡ Built using HTML, CSS & JavaScript</li>
-                  <li  className="hover:dark:[text-shadow:0_0_15px_#87CEEB] transition duration-900 ease-in-out hover:[text-shadow:0_0_15px_#374151]">🕹️ Smooth Animations</li>
-                </ul>
+              {/* Coffee */}
+              <div className="flex items-center justify-center">
+                <div className="my-4 px-4 flex flex-col gap-2 justify-center items-center">
+                  <h4 className="font-bold text-[18px] hover:dark:[text-shadow:0_0_15px_#87CEEB] text-center transition  duration-900 ease-in-out hover:[text-shadow:0_0_15px_#374151] active:[text-shadow:0_0_15px_#87CEEB]">Coffee Sales Dashboard</h4>
+                  <img src="Coffee.PNG" alt="Mahadev Ecommerce Dashboard" className="rounded-lg shadow-lg w-full max-w-4xl" />
+                  <a
+                    href="https://github.com/Adi-2006/CoffeeSales"
+                    target="_blank"
+                    className="dark:text-teal-400 text-blue-600 hover:text-teal-300  text-lg font-bold underline dark:hover:text-blue-400 "
+                  >
+                    Github Link
+                  </a>
+                  <ul className="flex flex-col gap-3 list-disc  pl-5">
+                    <li className="hover:dark:[text-shadow:0_0_15px_#87CEEB] transition  duration-900 ease-in-out hover:[text-shadow:0_0_15px_#374151] active:[text-shadow:0_0_15px_#87CEEB]">
+                      Built an <strong>interactive Excel dashboard</strong> to visualize and track global coffee sales data across multiple years (2019–2022).
+                    </li>
+                    <li className="hover:dark:[text-shadow:0_0_15px_#87CEEB] transition  duration-900 ease-in-out hover:[text-shadow:0_0_15px_#374151] active:[text-shadow:0_0_15px_#87CEEB]">
+                      Included <strong>line and bar charts</strong> to represent <strong>sales over time, top countries, and top customers</strong>, providing deep insights at a glance.
+                    </li>
+                    <li className="hover:dark:[text-shadow:0_0_15px_#87CEEB] transition  duration-900 ease-in-out hover:[text-shadow:0_0_15px_#374151] active:[text-shadow:0_0_15px_#87CEEB]">
+                      Integrated <strong>dynamic slicers</strong> for filtering data by <strong>roast type, size, loyalty card status, and date</strong> to allow for flexible data exploration.
+                    </li>
+                    <li className="hover:dark:[text-shadow:0_0_15px_#87CEEB] transition  duration-900 ease-in-out hover:[text-shadow:0_0_15px_#374151] active:[text-shadow:0_0_15px_#87CEEB]">
+                      Showcased <strong>top-performing coffee types</strong> (Arabica, Robusta, etc.) and <strong>customer behavior</strong> patterns across seasons and geographies.
+                    </li>
+                    <li className="hover:dark:[text-shadow:0_0_15px_#87CEEB] transition  duration-900 ease-in-out hover:[text-shadow:0_0_15px_#374151] active:[text-shadow:0_0_15px_#87CEEB]">
+                      Identified high-value customers and high-demand regions such as the <strong>United States, Ireland, and the United Kingdom</strong> using performance visuals.
+                    </li>
+                  </ul>
                 </div>
-              </div>
-              {/* Tech Stack */}
-              <div className="flex gap-3 flex-wrap justify-center items-center text-sm font-semibold text-gray-700 dark:text-gray-300">
-                
-                
-                <span className="px-2 py-1  hover:dark:[text-shadow:0_0_15px_#87CEEB] transition duration-900 ease-in-out hover:[text-shadow:0_0_15px_#374151] bg-gray-200 dark:bg-gray-900 rounded">
-                  JavaScript
-                </span>
 
-                
-                <span className="px-2 py-1  hover:dark:[text-shadow:0_0_15px_#87CEEB] transition duration-900 ease-in-out hover:[text-shadow:0_0_15px_#374151] bg-gray-200 dark:bg-gray-900 rounded">
-                  CSS
-                </span>
-                <span className="px-2 py-1  hover:dark:[text-shadow:0_0_15px_#87CEEB] transition duration-900 ease-in-out hover:[text-shadow:0_0_15px_#374151] bg-gray-200 dark:bg-gray-900 rounded">
-                  HTML
-                </span>
               </div>
-            </div>
 
-
-
-
-
-            {/* Pr-6 razorPay Clone */}
-            <div  ref={(element) => (divRefs.current[9] = element)} className="w-[100%] rounded-2xl  flex flex-col dark:bg-gray-800 items-center lg:my-2 my-3 py-4 shadow-[0_10px_10px_rgba(0,0,0,0.6)] justify-center gap-6 lg:min-h-[350px] px-3 h-auto">
-              {/* Title */}
-              <h3 className="text-center mx-auto text-2xl font-bold hover:dark:[text-shadow:0_0_15px_#87CEEB] transition duration-900 ease-in-out hover:[text-shadow:0_0_15px_#374151]">
-                RazorPay Clone
-              </h3>
-              {/* Image Section */}
-              <div className="flex flex-col items-center justify-center gap-4">
-              
-                <img
-                  src="./razorpay.PNG"
-                  className=" w-[80%] rounded-lg"
-                  alt="RazorPay"
-                />
-              </div>
-              {/* Live Link */}
-              <div className="mx-auto group text-xl dark:hover:text-blue-500 hover:text-blue-800">
-                <a
-                  href="https://adi-2006.github.io/RazorPayClone/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Live Demo 🔗
-                </a>
-              </div>
-              {/* Description & Features */}
-              <div className="text-center px-4 ">
-                <p className="text-gray-900 max-w-[600px]  hover:dark:[text-shadow:0_0_15px_#87CEEB] transition duration-900 ease-in-out hover:[text-shadow:0_0_15px_#374151] dark:text-gray-300">
-                Razorpay is an Indian payment gateway that enables businesses to accept, process, and disburse payments securely. It supports multiple payment modes, including cards, UPI, net banking, and wallets, offering seamless transactions with robust security and automation features.
-                </p>
-                <div className="w-[80%] mx-auto flex items-center justify-center">
-                <ul className="mt-4 text-gray-900 text-start dark:text-gray-300  list-disc pl-5  list-outside">
-               
-                
-                </ul>
-                </div>
-              </div>
-              {/* Tech Stack */}
-              <div className="flex gap-3 flex-wrap justify-center items-center text-sm font-semibold text-gray-700 dark:text-gray-300">
-                <span className="px-2 py-1 hover:dark:[text-shadow:0_0_15px_#87CEEB] transition duration-900 ease-in-out hover:[text-shadow:0_0_15px_#374151]  bg-gray-200 dark:bg-gray-900 rounded">
-                  HTML
-                </span>
-                <span className="px-2 py-1 hover:dark:[text-shadow:0_0_15px_#87CEEB] transition duration-900 ease-in-out hover:[text-shadow:0_0_15px_#374151] bg-gray-200 dark:bg-gray-900 rounded">
-                 TailWind Css
-                </span>
-                <span className="px-2 py-1 hover:dark:[text-shadow:0_0_15px_#87CEEB] transition duration-900 ease-in-out hover:[text-shadow:0_0_15px_#374151] bg-gray-200 dark:bg-gray-900 rounded">
-                Css
-                </span>
-              </div>
             </div>
           </div>
         </div>
