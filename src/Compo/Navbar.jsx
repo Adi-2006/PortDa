@@ -189,22 +189,6 @@ function Navbar() {
                                     ${isActive ? "bg-gray-200" : "bg-amber-50"}
                                    hover:text-orange-700 text-xl `
                 }
-                to="/skills"
-              >
-                Skills
-              </NavLink>
-            </li>
-            <li className="py-2 w-screen px-2 text-xl" onClick={closeMenu}>
-              <NavLink
-                className={({ isActive }) =>
-                  `py-2 px-3 duration-200 block text-center border-gray-200 hover:bg-gray-100 rounded-2xl
-                                    ${isActive
-                    ? "text-orange-500"
-                    : "text-gray-700"
-                  }
-                                    ${isActive ? "bg-gray-200" : "bg-amber-50"}
-                                   hover:text-orange-700 text-xl `
-                }
                 to="/projects"
               >
                 Project
